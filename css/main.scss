@@ -25,7 +25,8 @@ a img {
   border: none;
 }
 
-input[type=text] {
+input[type=text],
+input[type=search] {
   border: none;
   height: 28px;
   border-radius: 4px;
@@ -194,7 +195,9 @@ p, ul, ol {
       padding-right: 0;
     }
     img {
-      width: 100%;
+      max-width: 100%;
+      margin: 30px auto;
+      display: block;
     }
   }
 }
