@@ -1,0 +1,256 @@
+$main-color: #43A6F8;
+$menu-color: #333;
+
+html, body, p, ul, ol, h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  font-size: 14px;
+  -webkit-font-feature-settings: 'kern' 1;
+  -moz-font-feature-settings: 'kern' 1;
+  -o-font-feature-settings: 'kern' 1;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a img {
+  border: none;
+}
+
+input[type=text] {
+  border: none;
+  height: 28px;
+  border-radius: 4px;
+  padding: 0 10px;
+  &:focus {
+    background-color: lighten($main-color, 20%);
+    outline: none;
+  }
+}
+
+::selection {
+  background: #D6EDFF;
+}
+
+p, ul, ol {
+  -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
+  -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
+  -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
+  margin: 0 0 1.75em 0;
+  text-rendering: geometricPrecision;
+}
+
+.container {
+  margin: 0 auto;
+  width: 800px;
+  max-width: 100%;
+}
+
+.header {
+  height: 80px;
+  line-height: 80px;
+  border-bottom: 1px solid #f3f3f3;
+  background-color: $main-color;
+  color: #fff;
+  padding: 0 15px;
+  .icon-menu, .icon-search {
+    font-size: 24px;
+    cursor: pointer;
+    &:hover {
+      opacity: .5;
+    }
+  }
+  .icon-menu {
+    float: right;
+  }
+  .container {
+    position: relative;
+  }
+}
+
+.site-name {
+  float: left;
+  color: #fff;
+  h1 {
+    font-size: 28px;
+    font-weight: normal;
+  }
+  &:hover {
+    opacity: .5;
+  }
+}
+
+/* search */
+.search {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  .keyword {
+    position: relative;
+    top: -3px;
+    display: none;
+  }
+}
+
+/* menu */
+.menu {
+  position: fixed;
+  right: 0;
+  background-color: $menu-color;
+  color: #fff;
+  height: 100%;
+  width: 240px;
+  line-height: 2.4;
+  padding: 30px;
+  box-sizing: border-box;
+  z-index: 9999;
+  display: none;
+  li {
+    list-style: none;
+    width: 100%;
+    border-bottom: 1px dotted lighten($menu-color, 12%);
+    &:hover a {
+      color: lighten($menu-color, 20%);
+    }
+  }
+  a {
+    color: #fff;
+    display: block;
+  }
+  .title {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  .icon-close {
+    float: right;
+    cursor: pointer;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 30px;
+    width: 16px;
+    height: 50px;
+    background-color: $menu-color;
+  }
+  .rss {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    color: $menu-color;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    border-bottom: none;
+    &:hover {
+      background-color: #f3f3f3;
+      cursor: pointer;
+    }
+  }
+}
+
+.post {
+  position: relative;
+  margin: 4em auto;
+  border-bottom: #EBF2F6 1px solid;
+  word-wrap: break-word;
+  padding: 0 15px 4em;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.post-title {
+  font-size: 2em;
+  a:active, a:hover {
+    color: $main-color;
+  }
+}
+
+.post-excerpt {
+  font-size: 1.2em;
+  line-height: 1.7em;
+  .imgs {
+    display: flex;
+    .img {
+      flex: 1;
+      padding: 8px;
+    }
+    .img:first-of-type {
+      padding-left: 0;
+    }
+    .img:last-of-type {
+      padding-right: 0;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.post-meta {
+  display: block;
+  margin: 1.75em 0 0 0;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 2.2em;
+  color: #9EABB3;
+  a {
+    color: #9EABB3;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+}
+
+.author-thumb {
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin-right: 9px;
+  margin-top: 1px;
+}
+
+.post-date {
+  display: inline-block;
+  margin-left: 8px;
+  padding-left: 12px;
+  border-left: #d5dbde 1px solid;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  white-space: nowrap;
+}
+
+.footer {
+  text-transform: capitalize;
+  padding: 50px 15px;
+  background: #fbfcfd;
+  color: darkgrey;
+  a {
+    color: darkgrey;
+  }
+}
+
+.pull-right {
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    text-align: center;
+    .pull-right {
+      float: none;
+      display: block;
+    }
+  }
+}
