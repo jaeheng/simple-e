@@ -248,6 +248,23 @@ p, ul, ol {
   float: right;
 }
 
+// 分页
+.pagination {
+  margin: 0 auto 20px;
+  text-align: center;
+  span, a {
+    background: #fbfcfd;
+    padding: 2px 8px;
+  }
+  span {
+    background: $main-color;
+    color: #fff;
+  }
+  a:hover {
+    background-color: $main-color;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .footer {
     text-align: center;
