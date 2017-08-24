@@ -413,7 +413,7 @@ function blog_comments($comments)
     extract($comments);
     if ($commentStacks): ?>
         <a name="comments"></a>
-        <h3 class="comment-header">评论：</h3>
+        <h3 class="comment-header">文章评论：</h3>
     <?php endif; ?>
     <?php
     $isGravatar = Option::get('isgravatar');
@@ -426,9 +426,8 @@ function blog_comments($comments)
             <?php if ($isGravatar == 'y'): ?>
                 <div class="avatar"><img src="<?php echo getGravatar($comment['mail']); ?>"/></div><?php endif; ?>
             <div class="comment-info">
-                <div class="poster"><?php echo $comment['poster']; ?> </div>
-                <span class="comment-time"><?php echo
-                    $comment['date']; ?></span>
+                <div class="poster"><?php echo $comment['poster']; ?></div>
+                <span class="comment-time"><?php echo $comment['date']; ?></span>
                 <div class="comment-content"><?php echo $comment['content']; ?></div>
                 <div class="comment-reply"><a href="#comment-<?php echo $comment['cid']; ?>"
                                               onclick="commentReply(<?php echo $comment['cid']; ?>,this)">回复</a></div>

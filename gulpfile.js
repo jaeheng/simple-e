@@ -41,5 +41,5 @@ gulp.task('stylesheet', function () {
 /* 监控js和scss */
 gulp.task('watch', ['script', 'stylesheet'], function () {
     gulp.watch(mainjs, ['script']);
-    gulp.watch('src/css/*.scss', ['stylesheet']);
+    gulp.watch('./css/*.scss', ['stylesheet']);
 })
