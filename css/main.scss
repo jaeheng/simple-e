@@ -220,7 +220,7 @@ p, ul, ol {
 
 .post-content {
   padding-top: 2em;
-  line-height: 1.7;
+  line-height: 2;
   ul, ol {
     padding-left: 1em;
   }
@@ -385,6 +385,22 @@ p, ul, ol {
   cursor: pointer;
   &:hover {
     background-color: darken($main-color, 10%);
+  }
+}
+
+.breadthumb {
+  padding: 2em 0;
+  .bread-item {
+    position: relative;
+    &:after {
+      content: '>';
+      color: #999;
+      padding-left: 1em;
+      padding-right: 0.8em;
+    }
+    &:last-of-type:after {
+      content: ''
+    }
   }
 }
 

@@ -13,7 +13,8 @@ if (!defined('EMLOG_ROOT')) {
 
         <div class="post-meta">
             <img class="author-thumb" src="<?php echo getAuthorAvatar($author);?>" alt="jaeheng" width="32" height="32">
-            <?php blog_author($author); blog_sort($logid); ?>
+            <?php blog_author($author);?>
+            <?php blog_sort($logid);?>
             <time class="post-date" datetime="<?php echo gmdate('Y-n-j', $date); ?>"><?php echo gmdate('Y-m-d H:i:s', $date); ?></time>
             <?php editflg($logid, $author); ?>
         </div>

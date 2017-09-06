@@ -9,7 +9,6 @@ Sidebar Amount:0
 */
 if (!defined('EMLOG_ROOT')) exit('error!');
 require_once View::getView('module');
-require_once View::getView('config');
 $version = 'v1.0.0';
 ?>
 <!doctype html>

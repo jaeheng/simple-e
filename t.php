@@ -2,8 +2,10 @@
 /**
  * 微语部分
  */
-if(!defined('EMLOG_ROOT')) {exit('error!');} 
+if(!defined('EMLOG_ROOT')) {exit('error!');}
 ?>
+<p style="text-align: center; padding: 4em 0;">碎语功能不可用!</p>
+<?php die();?>
 
 <!--面包屑导航-->
 <div class="breadthumb">
