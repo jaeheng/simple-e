@@ -28,7 +28,6 @@ a img {
   border: none;
 }
 
-input[type=text],
 input[type=search] {
   border: none;
   height: 28px;
@@ -233,6 +232,9 @@ p, ul, ol {
   img {
     max-width: 100%;
   }
+  h1, h2, h3, h4, h5, p {
+    margin-bottom: 1em;
+  }
 }
 
 .tags a {
@@ -340,6 +342,52 @@ p, ul, ol {
   }
 }
 
+#commentform {
+  background-color: #FBFCFD;
+  padding: 2em;
+  margin-bottom: 2em;
+}
+
+.form-group {
+  margin-bottom: 1em;
+  padding-left: 120px;
+  position: relative;
+  label {
+    position: absolute;
+    left: 0;
+    width: 120px;
+    display: block;
+  }
+  input[type=text],
+  textarea {
+    border: 1px solid #fff;
+    width: 100%;
+    line-height: 30px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    &:focus {
+      border-color: $main-color;
+      outline: none;
+    }
+  }
+  input[name=imgcode] {
+    width: 50%;
+    margin-left: 10px;
+  }
+}
+
+.btn {
+  width: 120px;
+  height: 28px;
+  background-color: $main-color;
+  color: #fff;
+  border: 1px solid $main-color;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($main-color, 10%);
+  }
+}
+
 @media screen and (max-width: 600px) {
   .footer {
     text-align: center;
@@ -351,5 +399,21 @@ p, ul, ol {
   .post-neighbor .next {
     float: left;
     width: 100%;
+  }
+  #commentform {
+    padding: 15px;
+  }
+  .form-group {
+    padding-left: 0;
+    label {
+      position: relative;
+    }
+  }
+  .comment {
+    padding-left: 40px;
+    .avatar {
+      width: 32px;
+      height: 32px;
+    }
   }
 }

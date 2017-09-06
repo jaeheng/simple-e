@@ -500,8 +500,13 @@ function blog_comments_post($logid, $ckname, $ckmail, $ckurl, $verifyCode, $allo
                         <label for="comment">评论内容</label>
                         <textarea name="comment" id="comment" rows="5" tabindex="4" placeholder="请文明评论"></textarea>
                     </div>
-                    <p><?php echo $verifyCode; ?> <input type="submit" id="comment_submit" value="发表评论" class="btn"
-                                                         tabindex="6"/></p>
+                    <div class="form-group">
+                        <?php echo $verifyCode; ?>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" id="comment_submit" value="发表评论" class="btn"
+                               tabindex="6"/>
+                    </div>
                     <input type="hidden" name="pid" id="comment-pid" value="0" size="22" tabindex="1"/>
                 </form>
             </div>

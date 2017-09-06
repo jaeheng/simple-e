@@ -40,7 +40,7 @@ doAction('index_loglist_top'); ?>
         endforeach;
     else:
         ?>
-        <li style="background-color: #fff;padding: 30px;">未找到 <br>抱歉，没有符合您查询条件的结果。</li>
+        <li style="background-color: #fff;padding: 100px 30px;">未找到 <br>抱歉，没有符合您查询条件的结果。</li>
     <?php endif;?>
 
     <!--分页-->
