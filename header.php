@@ -2,7 +2,7 @@
 /*
 Template Name:simple-e
 Description: <span style="font-size: 24px; color: #43A6F8;">简洁</span>
-Version:1.0.0
+Version:0.1
 Author:jaeheng
 Author Url:http://www.zhangziheng.com
 Sidebar Amount:0
